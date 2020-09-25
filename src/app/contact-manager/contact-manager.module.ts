@@ -6,6 +6,8 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ContactManagerAppComponent } from './contact-manager-app.component';
+import { MaterialModule } from '../shared/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,12 @@ import { ContactManagerAppComponent } from './contact-manager-app.component';
     SideNavComponent,
     ContactManagerAppComponent,
   ],
-  imports: [CommonModule, ContactManagerRoutingModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    // FlexLayoutModule,
+    ContactManagerRoutingModule,
+  ],
   exports: [
     MainContentComponent,
     ToolbarComponent,
